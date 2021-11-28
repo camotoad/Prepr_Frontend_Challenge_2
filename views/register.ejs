@@ -90,52 +90,87 @@
                         </a>
                     </div>
                     <div class='dropdown-divider'></div>
-                    <form method='post' action='/register'></form>
+                        <% if(messages.error) { %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= messages.error %> 
+                        </div>
+                        <% } %>
+                    <form method='post' action='/register'>
                         <div class=''>
                             <label for="first_name">
-                                <input type="text" id="first_name" placeholder="First Name">
+                                <input type="text" name="first_name" id='first_name' placeholder="First Name">
                                 <span><i class='fas fa-user'></i>&nbsp;First Name *</span>
                             </label>
+                            <div class="error">
+                                <% if (messages.first_name) {%>
+                                <%= messages.first_name %>
+                                <% } %>
+                            </div>    
                         </div>
                         <div class=''>
                             <label for="last_name">
-                                <input type="text" id="last_name" placeholder="Last Name">
+                                <input type="text" name="last_name" placeholder="Last Name">
                                 <span><i class='fas fa-user'></i>&nbsp;Last Name *</span>
                             </label>
+                            <div class="error">
+                                <% if (messages.last_name) {%>
+                                <%= messages.last_name %>
+                                <% } %>
+                            </div>
                         </div>
                         <div class=''>
                             <label for="username">
-                                <input type="text" id="username" placeholder="User Name">
+                                <input type="text" name="username" placeholder="User Name">
                                 <span><i class='fas fa-user'></i>&nbsp;User Name *</span>
                             </label>
+                            <div class="error">
+                                <% if (messages.username) {%>
+                                <%= messages.username %>
+                                <% } %>
+                            </div>
                         </div>
                         <div class=''>
                             <label for="password">
-                                <input type="password" id="password" placeholder="Password">
+                                <input type="password" name="password" placeholder="Password">
                                 <span><i class='fas fa-lock'></i>&nbsp;Password *</span>
                             </label>
+                            <div class="error">
+                                <% if (messages.password) {%>
+                                <%= messages.password %>
+                                <% } %>
+                            </div>
                         </div>
                         <div class=''>
                             <label for="con_password">
-                                <input type="password" id="con_password" placeholder="Confirm Password">
+                                <input type="password" name="con_password" placeholder="Confirm Password">
                                 <span><i class='fas fa-check-double'></i>&nbsp; Confirm Password *</span>
                             </label>
+                            <div class="error">
+                                <% if (messages.con_password) {%>
+                                <%= messages.con_password %>
+                                <% } %>
+                            </div>
                         </div>
                         <div class=''>
                             <label for="email">
-                                <input type="email" id="email" placeholder="Email">
+                                <input type="email" name="email" placeholder="Email">
                                 <span><i class='fas fa-envelope'></i>&nbsp;Email *</span>
                             </label>
+                            <div class="error">
+                                <% if (messages.email) {%>
+                                <%= messages.email %>
+                                <% } %>
+                            </div>
                         </div>
                         <div class=''>
                             <label for="phone_number">
-                                <input type="text" id="phone_number" placeholder="Phone Number">
-                                <span><i class='fas fa-mobile-alt'></i>&nbsp;Phone Number *</span>
+                                <input type="text" name="phone_number" placeholder="Phone Number">
+                                <span><i class='fas fa-mobile-alt'></i>&nbsp;Phone Number</span>
                             </label>
                         </div>
                         <div class=''>
-                            <select class='' id="user_type">
-                                <option selected>User Type *</option>
+                            <select class='' name="user_type">
+                                <option value="" selected>User Type *</option>
                                 <option value="student">Student</option>
                                 <option value="applicant">Applicant</option>
                                 <option value="teacher">Teacher</option>
@@ -154,6 +189,11 @@
                                 <option value="startup">Startup</option>
                                 <option value="evaluator">Evaluator</option>
                               </select>
+                              <div class="error">
+                                <% if (messages.user_type) {%>
+                                <%= messages.user_type %>
+                                <% } %>
+                            </div>
                         </div>
                         <div class=''>
                             <select id="status" name="status">
@@ -170,18 +210,23 @@
                                 <option value="looking_to_create_social_impact">looking to create social impact</option>
                                 <option value="looking_for_investors">looking for investors </option>
                             </select>
+                            <div class="error">
+                                <% if (messages.status) {%>
+                                <%= messages.status %>
+                                <% } %>
+                            </div>
                         </div>
                         <div class=''>
                             <label for="referral_code">
-                                <input type="text" id="referral_code" placeholder="Referral Code">
-                                <span><i class='fas fa-envelope'></i>&nbsp;Referral Code *</span>
+                                <input type="text" name="referral_code" placeholder="Referral Code">
+                                <span><i class='fas fa-envelope'></i>&nbsp;Referral Code</span>
                             </label>
                         </div>
                         <div class='terms'>
                             By registering, you agree to the Prepr <a href='#' class='custom-link'>Terms of Use</a>, <a href='#' class='custom-link'>Privacy Policy and Cookie Policy</a>
                         </div>
                         <div class='terms'>
-                            <button type="button" class="btn btn-warning btn-block" type='submit'>Register</button>
+                            <input class="btn btn-warning btn-block" type='submit' value='Register'>
                         </div>
                         <div class='terms' style='text-align: center;'>
                             You already have an account? <a href='/login' class='tags'>Login</a>

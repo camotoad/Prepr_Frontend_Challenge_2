@@ -24,24 +24,39 @@
                         </a>
                     </div>
                     <div class='dropdown-divider'></div>
-                    <form method='post' action='/register'></form>
+                        <% if(messages.success) { %>
+                        <div class="alert alert-success" role="alert">
+                        <%= messages.success %>
+                        </div>
+                        <% } %>           
+                        <% if(messages.error) { %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= messages.error %> 
+                        </div>
+                        <% } %>
+                    <form method='post' action=''>
+                    <div class="error">
+                        <% if (messages.general) {%>
+                        <%= messages.general %>
+                        <% } %>
+                    </div>
                         <div class=''>
                             <label for="username">
-                                <input type="text" id="username" placeholder="User Name">
+                                <input type="text" name="username" placeholder="User Name">
                                 <span><i class='fas fa-user'></i>&nbsp;User Name *</span>
                             </label>
                         </div>
                         <div class=''>
                             <label for="password">
-                                <input type="password" id="password" placeholder="Password">
+                                <input type="password" name="password" placeholder="Password">
                                 <span><i class='fas fa-lock'></i>&nbsp;Password *</span>
                             </label>
                         </div>
                         <div>
-                            <a href='#' class='link-dark' style="float: right; margin-bottom: 10px;">Forgot ?</a>
+                            <a href='#' class='link-dark' style="float: right; margin: 5px 5px;">Forgot ?</a>
                         </div>
                         <div class='terms'>
-                            <button type="button" class="btn btn-warning btn-block" type='submit'>Login</button>
+                            <input class="btn btn-warning btn-block" type='submit' value='Login'>
                         </div>
                         <div class='terms' style='text-align: center;'>
                             Don't have an account? <a href='/register' class='tags'>Sign up</a>

@@ -9,7 +9,7 @@ body{
 .carousel-item{
     width: 700px;
     height: 620px;
-    margin-left: 10%;
+    margin-left: 3%;
 }
 
 .form-div{
@@ -24,7 +24,7 @@ body{
 }
 
 label{
-    margin-bottom:15px;
+    margin-bottom:0px;
     position:relative;
     border-bottom:1px solid #ddd;
     width: 80%;
@@ -76,6 +76,11 @@ select, .terms{
     color:white;
 }
 
+.btn-block:hover{
+    box-shadow: 1px 4px 4px #888888, -1px 0px 4px #888888;
+    color: white;
+}
+
 .custom-link{
     text-decoration: none;
 }
@@ -123,4 +128,13 @@ body.back{
 .space-eater{
     width: 900px;
     height: 1000px;
+}
+.error{
+    color: red;
+    width:80%;
+    margin-left: 10%;
+    font-size: x-small;
+}
+.alert{
+    margin-top: 10px;
 }
