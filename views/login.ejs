@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gan's Frontend Challenge 2</title>
+</head>
+<body class='back'>
+    <div class='container'>
+        <div class='col-lg-12'>
+            <div class='row row-div'>
+                <div class='col-lg-8'>
+                    <div class='space-eater'></div>
+                </div>
+                <!-- form -->
+                <div class='col-lg-4 form-div bg-white'>
+                    <div class='img-div'>
+                        <a href="#">
+                            <img src="images/logo.png">
+                        </a>
+                    </div>
+                    <div class='dropdown-divider'></div>
+                    <form method='post' action='/register'></form>
+                        <div class=''>
+                            <label for="username">
+                                <input type="text" id="username" placeholder="User Name">
+                                <span><i class='fas fa-user'></i>&nbsp;User Name *</span>
+                            </label>
+                        </div>
+                        <div class=''>
+                            <label for="password">
+                                <input type="password" id="password" placeholder="Password">
+                                <span><i class='fas fa-lock'></i>&nbsp;Password *</span>
+                            </label>
+                        </div>
+                        <div>
+                            <a href='#' class='link-dark' style="float: right; margin-bottom: 10px;">Forgot ?</a>
+                        </div>
+                        <div class='terms'>
+                            <button type="button" class="btn btn-warning btn-block" type='submit'>Login</button>
+                        </div>
+                        <div class='terms' style='text-align: center;'>
+                            Don't have an account? <a href='/register' class='tags'>Sign up</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <footer class='footer border-top' style='position: fixed'>
+        <div class='container footer-div'>
+            <div class='row'>
+                <div class='col-md-2' >
+                    vSome version
+                </div>
+                <div class='col-md-8 text-center'>
+                    <a href='#' class='link-dark'>Private Policy</a>
+                    <a href='#' class='link-dark'>Terms of Use</a>
+                    <a href='#' class='link-dark'>Help Center</a>
+                </div>
+                <div class='col-md-2'>
+                    Powered by blah blah
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>
